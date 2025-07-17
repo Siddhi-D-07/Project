@@ -50,15 +50,15 @@ df = pd.read_csv("/content/fuel efficiency dataset.csv")
 
 columns = df.columns.tolist()
 
-# Initialize Faker
+**Initialize Faker**
 fake = Faker()
 
-# Number of synthetic rows needed
+**Number of synthetic rows needed**
 original_rows = len(df)
 target_rows = 400000
 synthetic_rows_needed = target_rows - original_rows
 
-# Generate synthetic data based on column names
+**Generate synthetic data based on column names**
 import random
 
 synthetic_data = []
@@ -80,11 +80,11 @@ for i in range(1, 400001):
     }
     synthetic_data.append(row)
 
-# Convert to DataFrame and combine with original
+**Convert to DataFrame and combine with original**
 synthetic_df = pd.DataFrame(synthetic_data, columns=columns)
 full_df = pd.concat([df, synthetic_df], ignore_index=True)
 
-# Save the synthetic dataset
+**Save the synthetic dataset**
 full_df.to_csv("synthetic_fuel_efficiency.csv", index=False)
 
 
