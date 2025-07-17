@@ -6,7 +6,7 @@ The goal of this step is to build a dataset that truly represents vehicles, fuel
 ## Data Preparation Method :
 An initial sample of 1000 rows was created with key features. This sample was then programmatically extended to 400,000 rows, incorporating realistic and diverse values that reflect the variety of vehicles, fuel types, and driving conditions found in India.
 
-## About the Dataset :
+## About the Dataset:
 Total rows: 400,000
 Total columns: 12
 
