@@ -27,7 +27,7 @@ To begin the data cleaning process, we first explored the dataset to identify po
 
 ### Inconsistencant values:
 
-Fix spelling, formatting, or category errors to keep data uniform and reliable for analysis.
+Fix spelling, formatting, duplicates, or category errors to keep data uniform and reliable for analysis.
 
 <pre> dataset[fuel_type] = dataset['fuel_type.replace]({
     'diesel' : 'Diesel',
@@ -35,6 +35,18 @@ Fix spelling, formatting, or category errors to keep data uniform and reliable f
      'lpg'   : 'LPG'
 })</pre>
 
+<pre> #Check number of duplicates before removal
+print("Duplicate rows before removal:", df.duplicated().sum()) </pre>
+
+<pre> #Remove duplicate rows
+df_cleaned = df.drop_duplicates() </pre>
+
+*Output: np.int64(0)*
+
+<pre> #Check number of duplicates after removal
+print("Duplicate rows after removal:", df_cleaned.duplicated().sum()) </pre>
+
+*Output: Original dataset shape: (401000, 12)*
 
 ## 2.Validate plausible ranges and values.
 
@@ -86,19 +98,20 @@ This above code uses Matplotlib to create histograms for selected numeric column
 *Output*
 
 <p align="center">
-  <img src="../Screenshots/horsepower.png" alt="Distribution of Fuel Efficiency" width="700">
+  <img src="Screenshots/horsepower.png" alt="Distribution of Horse Power" width="700">
 </p>
 
 <p align="center">
-  <img src="../Screenshots/fuel.png" alt="Distribution of Fuel Efficiency" width="700">
+  <img src="Screenshots/fuel.png" alt="Distribution of Fuel Efficiency" width="700">
 </p>
 
 <p align="center">
-  <img src="../Screenshots/engine size.png" alt="Distribution of Fuel Efficiency" width="700">
+  <img src="Screenshots/engine size.png" alt="Distribution of Engine size" width="700">
 </p>
 
 <p align="center">
-  <img src="../Screenshots/engine capacity.png" alt="Distribution of Fuel Efficiency" width="700">
+  <img src="Screenshots/engine capacity.png" alt="Distribution of Engine Capacity" width="700">
+</p>
 
 *Output:
 count    12025.000000
