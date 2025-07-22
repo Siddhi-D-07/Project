@@ -1,13 +1,13 @@
 # Project : Predicting Fuel Efficiency of Indian Vehicles Using Deep Learning ##
 
 # Goal:
-- To create new meaningful features from existing data that can help improve the model’s ability to understand patterns and make accurate predictions.
+To create new meaningful features from existing data that can help improve the model’s ability to understand patterns and make accurate predictions.
 
 # Data Analysis :
-- Data analysis means examining and organizing data to find useful information, patterns, and trends. It helps us understand how different factors (like weight or horsepower) affect outcomes like fuel efficiency. This is done using graphs, statistics, and simple calculations.
+Data analysis means examining and organizing data to find useful information, patterns, and trends. It helps us understand how different factors (like weight or horsepower) affect outcomes like fuel efficiency. This is done using graphs, statistics, and simple calculations.
 
 
-# Steps used to Analysis the data:
+# Steps used to Analyse the data:
 
 ## 1. Explore Feature Relationships and  Concise interpretation :
 - Understand how different columns (features) in your dataset relate to each other, especially the target variable (e.g., fuel efficiency).
@@ -157,6 +157,6 @@ Correlation between  engine_capacities  and Fuel Efficiency: -0.0014159226312785
 
 
 # Summary :
-- We explored feature relationships using visualizations like histograms and scatter plots, followed by calculating correlations to understand how variables like engine size and horsepower relate to fuel efficiency. Based on observed patterns, we hypothesized possible explanations and created new features such as power-to-weight ratio and vehicle age to enhance model performance. Finally, we evaluated these engineered features and found that they helped improve prediction accuracy.
+We explored feature relationships using visualizations like histograms and scatter plots, followed by calculating correlations to understand how variables like engine size and horsepower relate to fuel efficiency. Based on observed patterns, we hypothesized possible explanations and created new features such as power-to-weight ratio and vehicle age to enhance model performance. Finally, we evaluated these engineered features and found that they helped improve prediction accuracy.
 
 
