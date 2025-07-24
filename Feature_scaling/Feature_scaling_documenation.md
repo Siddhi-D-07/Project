@@ -51,7 +51,7 @@ X_scaled = scaler.fit_transform(X) </pre>
 
 - This code uses `StandardScaler` to standardize the features in `X` by removing the mean and scaling to unit variance. It transforms the data so that each feature has a mean of 0 and a standard deviation of 1, which is beneficial for many machine learning algorithms, especially those sensitive to feature scales.
 
-## 2.Apply PCA
+## 2.Apply PCA (Principle Component Analysis):
 
 PCA (Principal Component Analysis) is applied to reduce the dimensionality of a dataset while retaining most of its important information. By transforming correlated features into a smaller set of uncorrelated components, PCA helps improve computational efficiency, reduces overfitting, and enhances model performance by focusing on the most significant variance in the data.
 
