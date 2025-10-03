@@ -5,15 +5,28 @@
 # Styled Interface (balloons kept)
 # -------------------------------
 
+from sklearn import pipeline
 import streamlit as st
 import pandas as pd
 import pickle
 
+import joblib  # or just import joblib if using modern versions
+
+
+
+joblib.dump(pipeline, "fuel_model.pkl")
+
+# Loading
+model = joblib.load("fuel_model.pkl")
+
 # -------------------------------
 # Load trained pipeline model
 # -------------------------------
-with open("fuel_model.pkl", "rb") as f:
-    model = pickle.load(f)
+import cloudpickle
+
+# Save pipeline instead of pickle
+with open("fuel_model.pkl", "wb") as f:
+    cloudpickle.dump(pipeline, f)
 
 # -------------------------------
 # Page setup
@@ -120,3 +133,5 @@ if st.button("🔍 Predict Mileage"):
 
     # Balloons effect 🎈
     st.balloons()
+
+
