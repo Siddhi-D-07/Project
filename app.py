@@ -1,17 +1,9 @@
 
-# -------------------------------
-# app.py
-# Streamlit Website for Fuel Efficiency Prediction
-# Styled Interface (balloons kept)
-# -------------------------------
-
 import streamlit as st
 import pandas as pd
 import pickle
 
-
 import joblib
-
 model = joblib.load("fuel_model.pkl")
 
 # -------------------------------
