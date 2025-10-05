@@ -106,6 +106,24 @@ input_data = pd.DataFrame({
     "selling_price": [selling_price]
 })
 
+
+import os
+import joblib
+
+# Get the current file's directory
+current_dir = os.path.dirname(__file__)
+model_path = os.path.join(current_dir, "fuel_model.pkl")
+
+# Load the model
+model = joblib.load(model_path)
+
+# Optional: load scalers if needed
+scaler_x_path = os.path.join(current_dir, "scaler_x.pkl")
+scaler_y_path = os.path.join(current_dir, "scaler_y.pkl")
+
+scaler_x = joblib.load(scaler_x_path)
+scaler_y = joblib.load(scaler_y_path)
+
 # -------------------------------
 # Prediction
 # -------------------------------
