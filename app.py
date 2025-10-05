@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import streamlit as st
 import pandas as pd
 import pickle
@@ -11,6 +12,26 @@ model = joblib.load("fuel_model.pkl")
 # -------------------------------
 with open("fuel_model.pkl", "rb") as f:
     model = pickle.load(f)
+=======
+# -------------------------------
+# app.py
+# Streamlit Website for Fuel Efficiency Prediction
+# Styled Interface (balloons kept)
+# -------------------------------
+
+import streamlit as st
+import pandas as pd
+import numpy as np 
+
+# -------------------------------
+# Load trained pipeline model
+import joblib
+import pandas as pd
+
+model = joblib.load("fuel_model.pkl")
+scaler_x = joblib.load("scaler_x.pkl")
+scaler_y = joblib.load("scaler_y.pkl")
+>>>>>>> f0b7c48 (add all)
 
 # -------------------------------
 # Page setup
@@ -106,6 +127,21 @@ input_data = pd.DataFrame({
     "selling_price": [selling_price]
 })
 
+<<<<<<< HEAD
+=======
+numeric_cols = ["vehicle_age","km_driven","engine","max_power","seats","selling_price"]
+
+# Scale numeric input
+input_data[numeric_cols] = scaler_x.transform(input_data[numeric_cols])
+
+# Predict scaled target
+scaled_pred = model.predict(input_data)[0]
+
+# Convert back to original scale
+prediction = scaler_y.inverse_transform([[scaled_pred]])[0][0]
+
+
+>>>>>>> f0b7c48 (add all)
 # -------------------------------
 # Prediction
 # -------------------------------
